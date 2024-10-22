@@ -8,11 +8,15 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Dashboard</a>
+        <a class="navbar-brand" href="#">Boilerplate App</a>
         <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logged in as: <span id="username">User</span></a>
+                    <!-- Show logged in user name -->
+                    <a class="nav-link" href="#">Logged in as: {{ .user }}</a>                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -41,26 +45,61 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="card">
                                 <div class="card-body">
-                                    Empty Container 1
+                                    <!-- Total Accounts -->
+                                    <!-- TODO Remove and convert to template partials -->
+                                    <h5 class="card-title text-center">Total Accounts</h5>
+                                    <h1 class="card-text text-center">100</h1>
+
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="card">
                                 <div class="card-body">
-                                    Empty Container 2
+                                    <!-- Total Sales -->
+                                    <!-- TODO Remove and convert to template partials -->
+                                    <h5 class="card-title text-center">Total Sales</h5>
+                                    <h1 class="card-text text-center">1000</h1>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- Active Users  -->
+                                     <!-- TODO Remove and convert to template partials -->
+                                    <h5 class="card-title   text-center">Active Users</h5>  
+                                    <h1 class="card-text text-center">50</h1>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- New Users -->
+                                    <!-- TODO Remove and convert to template partials -->
+                                    <h5 class="card-title text-center">New Users</h5>
+                                    <h1 class="card-text text-center">10</h1>                                
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    Empty Container 3
+                                    Empty Container 5 
+                                    <!-- Vector JS World Map -->
+                                    <div id="world-map" style="height: 500px;">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>

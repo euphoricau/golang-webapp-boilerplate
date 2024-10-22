@@ -16,6 +16,8 @@ func AuthRequired(c *gin.Context) {
 		c.Abort()
 		return
 	}
+	// Set user in context
+	c.Set("user", user)
 	c.Next()
 }
 

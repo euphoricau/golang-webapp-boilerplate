@@ -9,8 +9,13 @@ import (
 )
 
 func InitRoutes(router *gin.Engine) {
+
+	// Dashboard route with authentication middleware + pass user data to the template
 	router.GET("/", middleware.AuthRequired, func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
+		user := c.MustGet("user").(string)
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"user": user,
+		})
 	})
 
 	router.GET("/register", func(c *gin.Context) {
